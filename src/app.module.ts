@@ -1,3 +1,4 @@
+import { DbModule } from './db/db.module';
 import { AuthModule } from './auth/auth.module';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -6,6 +7,7 @@ import { ZodValidationPipe } from 'nestjs-zod'
 import { APP_PIPE } from '@nestjs/core'
 @Module({
   imports: [
+    DbModule,
     AuthModule,],
   controllers: [AppController],
   providers: [AppService, {
