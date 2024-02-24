@@ -7,10 +7,8 @@ https://docs.nestjs.com/modules
 import { Module } from '@nestjs/common';
 
 @Module({
-    imports: [],
-    controllers: [
-        AuthController,],
-    providers: [
-        AuthService,],
+  imports: [],
+  controllers: [AuthController],
+  providers: [AuthService],
 })
-export class AuthModule { }
+export class AuthModule {}
