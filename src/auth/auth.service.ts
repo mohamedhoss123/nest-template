@@ -7,6 +7,8 @@ import { LuciaService } from './lucia.service.js';
 
 @Injectable()
 export class AuthService {
-    constructor(public auth: LuciaService) { }
-    
+  constructor(private auth: LuciaService) { }
+
+  async login() {
+  }
 }

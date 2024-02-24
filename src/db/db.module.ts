@@ -9,5 +9,6 @@ import { connectionProvider, dbProvider } from './providers.js';
     imports: [],
     controllers: [],
     providers: [dbProvider,connectionProvider],
+    exports:[dbProvider]
 })
 export class DbModule {}
