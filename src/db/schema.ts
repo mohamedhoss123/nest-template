@@ -15,7 +15,7 @@ export const userTable = mysqlTable('user', {
     length: 255,
   }),
 });
-export type SelectUser = typeof userTable.$inferSelect;
+// export type SelectUser = typeof userTable.$inferSelect;
 
 export const sessionTable = mysqlTable('session', {
   id: varchar('id', {

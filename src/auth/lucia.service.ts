@@ -6,10 +6,11 @@ import { DrizzleMySQLAdapter } from '@lucia-auth/adapter-drizzle';
 import { Inject, Injectable } from '@nestjs/common';
 import { Lucia,Session } from 'lucia';
 import { sessionTable, userTable } from '../db/schema.js';
-
+import { MySql2Database } from 'drizzle-orm/mysql2';
+import * as schema from "../db/schema.js"
 @Injectable()
 export class LuciaService extends Lucia {
-    constructor(@Inject("DB") public readonly  db: Orm) {
+    constructor(@Inject("DB") public readonly  db:Orm ) {
         const adapter = new DrizzleMySQLAdapter(db, userTable as any, sessionTable);
         super(adapter, {
             sessionCookie: {
